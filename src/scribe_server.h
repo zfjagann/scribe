@@ -55,11 +55,11 @@ class scribeHandler : virtual public scribe::thrift::scribeIf,
   size_t numThriftServerThreads;
 
 
-  inline unsigned long long getMaxQueueSize() {
+  unsigned long long getMaxQueueSize() {
     return maxQueueSize;
   }
 
-  inline const StoreConf& getConfig() const {
+  const StoreConf& getConfig() const {
     return config;
   }
 
@@ -68,7 +68,7 @@ class scribeHandler : virtual public scribe::thrift::scribeIf,
   void incCounter(std::string counter);
   void incCounter(std::string counter, long amount);
 
-  inline void setServer(
+  void setServer(
       boost::shared_ptr<apache::thrift::server::TNonblockingServer> & server) {
     this->server = server;
   }

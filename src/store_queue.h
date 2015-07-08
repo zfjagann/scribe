@@ -57,7 +57,7 @@ class StoreQueue {
 
   // WARNING: don't expect this to be exact, because it could change after you check.
   //          This is only for hueristics to decide when we're overloaded.
-  inline unsigned long long getSize() {
+  unsigned long long getSize() {
     return msgQueueSize;
   }
  private:
