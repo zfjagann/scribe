@@ -242,7 +242,7 @@ bool scribeConn::open() {
     if (!protocol) {
       throw std::runtime_error("Failed to create protocol");
     }
-    protocol->setStrict(false, false);
+    protocol->setStrict(true, true);
     resendClient = shared_ptr<scribeClient>(new scribeClient(protocol));
     if (!resendClient) {
       throw std::runtime_error("Failed to create network client");
